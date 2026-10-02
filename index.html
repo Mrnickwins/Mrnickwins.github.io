@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nick | Cybersecurity & Web Development</title>
+<meta name="description" content="Nick, an aspiring ethical hacker working toward CEH, with a background in web development and programming.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="topbar">
+  <nav>
+    <a class="logo" href="#top">Nick</a>
+    <div class="links">
+      <a href="#About">About</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Experience">Experience</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Contact">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">Dark</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <pre class="code" aria-label="Quick intro"><code><span class="k">const</span> nick = {
+  goal: <span class="s">"Ethical Hacker (CEH)"</span>,
+  focus: [<span class="s">"Pentesting"</span>, <span class="s">"Web security"</span>],
+  status: <span class="s" id="status"></span>
+};</code></pre>
+    <h1>Hi, I'm Nick.</h1>
+    <p class="lead">Aspiring ethical hacker with a web development background, working toward the CEH certification.</p>
+    <div class="actions">
+      <a class="btn" href="#Projects">See my projects</a>
+      <a class="btn ghost" href="#Contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="About" class="reveal">
+    <h2>About</h2>
+    <p>I'm building a career in cybersecurity, focused on ethical hacking and penetration testing, and I'm working toward the Certified Ethical Hacker (CEH) certification.</p>
+    <p>I also build websites and games. Knowing how web applications are made helps me understand how they can be attacked, and defended.</p>
+  </section>
+
+  <section id="Skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skill-groups">
+      <div>
+        <h3>Cybersecurity</h3>
+        <div class="tags">
+          <span class="tag">Linux</span><span class="tag">Kali Linux</span>
+          <span class="tag">Nmap</span><span class="tag">Wireshark</span>
+          <span class="tag">TryHackMe</span><span class="tag">Hack The Box</span>
+        </div>
+      </div>
+      <div>
+        <h3>Web development</h3>
+        <div class="tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div>
+        <h3>Programming &amp; tools</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Java</span>
+          <span class="tag">Git &amp; GitHub</span>
+        </div>
+      </div>
+    </div>
+    <p class="note">Security tools and Python are still in active learning.</p>
+  </section>
+
+  <section id="Experience">
+    <h2 class="reveal">Experience &amp; education</h2>
+    <div class="timeline">
+      <div class="item reveal">
+        <h3>Cybersecurity self-study</h3>
+        <p class="when">Ongoing</p>
+        <p>Hands-on labs on TryHackMe and Hack The Box covering Linux, networking and reconnaissance. Attended a cybersecurity masterclass.</p>
+      </div>
+      <div class="item reveal">
+        <h3>Trainee at WebHotelier</h3>
+        <p class="when">Traineeship</p>
+        <p>Applied and developed my technical skills in a professional work environment.</p>
+      </div>
+      <div class="item reveal">
+        <h3>AKMH IEK</h3>
+        <p class="when">2 years</p>
+        <p>Studied Game Development and Web Design, building a foundation in programming, web development and design.</p>
+      </div>
+    </div>
+    <div class="langs reveal">
+      <span class="tag">Greek: native</span>
+      <span class="tag">English: B2, professional working proficiency</span>
+    </div>
+  </section>
+
+  <section id="Projects">
+    <h2 class="reveal">Projects</h2>
+    <div id="repo-grid"></div>
+    <p class="reveal more"><a href="https://github.com/Mrnickwins" target="_blank" rel="noopener">See everything on GitHub</a></p>
+  </section>
+
+  <section id="Contact" class="reveal">
+    <h2>Contact</h2>
+    <p>I'm open to cybersecurity opportunities and to conversations with people in the field.</p>
+    <p class="contact-links">
+      <a href="mailto:nickpapadop1996@gmail.com">nickpapadop1996@gmail.com</a>
+      <a href="https://github.com/Mrnickwins" target="_blank" rel="noopener">GitHub</a>
+      <!-- Add more here, e.g. LinkedIn:
+      <a href="https://www.linkedin.com/in/YOUR-NAME" target="_blank" rel="noopener">LinkedIn</a> -->
+    </p>
+  </section>
+</main>
+
+<footer>© <span id="year"></span> Nick</footer>
+<script src="script.js"></script>
+</body>
+</html>
