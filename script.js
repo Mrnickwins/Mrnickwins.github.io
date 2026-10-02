@@ -1,36 +1,41 @@
 /* ---------- Projects (edit this list to add or change projects) ---------- */
-const GITHUB = "https://github.com/Mrnickwins";
-
 const projects = [
   {
     name: "Shadows of Valenford",
     type: "Game",
     text: "A 2D action-platformer inspired by Castlevania, built with Java and LibGDX. Focused on gameplay mechanics, level design and player movement.",
     tags: ["Java", "LibGDX"],
-    link: GITHUB
+    repo: "https://github.com/Mrnickwins/shadows-of-valenford"
   },
   {
-    name: "Guitarist Community Website",
+    name: "Tone Archive",
     type: "Web",
-    text: "A platform for guitarists with guides to guitars, amplifiers and pedals, plus a forum to discuss and exchange opinions on gear.",
+    text: "A community website for guitarists with guides to guitars, amplifiers and pedals, plus a forum to discuss and exchange opinions on gear.",
     tags: ["HTML", "CSS", "JavaScript"],
-    link: GITHUB
+    live: "https://tonearchive.kesug.com"
+  },
+  {
+    name: "Pygame Snake",
+    type: "Game",
+    text: "A classic Snake game in Python with grid-based movement, growth and collision detection.",
+    tags: ["Python", "Pygame"],
+    repo: "https://github.com/Mrnickwins/pygame-snake"
   },
   {
     name: "Spotify Blend App",
     type: "In progress",
     text: "A music-sharing app using the Spotify API, designed to create a shared listening experience for me and my friends.",
-    tags: ["JavaScript", "Spotify API"],
-    link: GITHUB
+    tags: ["JavaScript", "Spotify API"]
   },
   {
     name: "Cybersecurity Labs",
     type: "Security",
     text: "Hands-on challenges on TryHackMe and Hack The Box covering Linux, networking, reconnaissance and ethical hacking concepts.",
-    tags: ["TryHackMe", "Hack The Box", "Linux"],
-    link: ""
+    tags: ["TryHackMe", "Hack The Box", "Linux"]
   }
 ];
+// Each project can have: repo (GitHub link) and/or live (working site).
+// Leave both out and the card shows no buttons.
 
 /* ---------- Scroll reveal ---------- */
 const observer = new IntersectionObserver((entries) => {
@@ -54,7 +59,10 @@ projects.forEach((p, i) => {
     <h3>${p.name}</h3>
     <p>${p.text}</p>
     <div class="tags small">${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-    ${p.link ? `<div class="card-links"><a href="${p.link}" target="_blank" rel="noopener">View on GitHub</a></div>` : ""}
+    ${p.live || p.repo ? `<div class="card-links">
+      ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener">Live site</a>` : ""}
+      ${p.repo ? `<a href="${p.repo}" target="_blank" rel="noopener">View code</a>` : ""}
+    </div>` : ""}
   `;
   grid.appendChild(card);
   observer.observe(card);
